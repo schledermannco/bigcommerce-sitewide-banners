@@ -11,6 +11,7 @@ function getBannerPageContent() {
     /* eslint no-undef: "off" */
     return fetch(BANNER_URL, { credentials: 'same-origin' })
         .then(page => page.text());
+
 }
 
 /**
@@ -27,16 +28,14 @@ function insertBanner($element, banners, location = '') {
         location === 'bottom' ?
         '="bottom"' :
         '';
-
+ 
     const html = `
-        <div class="banners" data-banner-location${ dataBannerLocation }>
-            <div class="banner">
-                ${ banners.map(banner => banner.outerHTML).join('\n') }
-            </div>
+        <div class="banner">
+            ${ banners.map(banner => banner.outerHTML).join('\n') }
         </div>
     `;
 
-    $element.insertAdjacentHTML('beforebegin', html);
+    $element.insertAdjacentHTML('afterbegin', html);
 }
 
 module.exports = class SiteWideBanners {
@@ -91,12 +90,12 @@ module.exports = class SiteWideBanners {
         let $element = null;
 
         if (place === 'top') {
-            const $currentBanner = document.querySelector('.banners[data-banner-location="top"]');
-            if ($currentBanner) {
-                return; // we don't want to override an existing banner
-            }
+            // const $currentBanner = document.querySelector('.banners[data-banner-location="top"]');
+            // if ($currentBanner) {
+            //     return; // we don't want to override an existing banner
+            // }
 
-            $element = document.querySelector('header.header');
+            $element = document.querySelector('.banners');
         } else if (place === 'bottom') {
             const $currentBanner = document.querySelector('.banners[data-banner-location="bottom"]');
             if ($currentBanner) {
@@ -104,13 +103,23 @@ module.exports = class SiteWideBanners {
             }
 
             $element = document.querySelector('footer.footer');
-        } else if (place) {
-            $element = document.querySelector(place);
-        }
+        } 
+        
+        // else if (place) {
+        //     $element = document.querySelector(place);
+        // }
 
-        if (!$element || !banners || banners.length === 0 || banners[0] === undefined) {
-            return;
-        }
+        // if (!$element || !banners || banners.length === 0 || banners[0] === undefined) {
+        //     return;
+        // }
+
+        // console.log(this.banners.top);
+
+        // let obj = this.banners.top;
+
+        // let allBanners = $.map(obj, function(value, index) {
+        //     return [value];
+        // });
 
         insertBanner($element, banners, place);
     }

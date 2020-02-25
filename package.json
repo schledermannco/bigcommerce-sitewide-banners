@@ -1,31 +1,45 @@
 {
-  "name": "bigcommerce-sitewide-banners",
-  "version": "0.2.1",
-  "description": "Sets everything you need in order to have a proper Sitewide banner on your store",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "grunt webpack"
+  "_from": "bigcommerce-sitewide-banners",
+  "_id": "bigcommerce-sitewide-banners@0.2.1",
+  "_inBundle": false,
+  "_integrity": "sha512-gVwzMnCxfw0m7mIASsnROPqMz1rsulZlQP+j3k/c1GSm5AwICbUfbS6AReXouLfOVsQWs1SwYv51VDaw21uD3w==",
+  "_location": "/bigcommerce-sitewide-banners",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "bigcommerce-sitewide-banners",
+    "name": "bigcommerce-sitewide-banners",
+    "escapedName": "bigcommerce-sitewide-banners",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:brandlabs/bigcommerce-sitewide-banners.git"
-  },
-  "keywords": [
-    "bigcommerce",
-    "sitewide banners",
-    "banners"
+  "_requiredBy": [
+    "#USER",
+    "/"
   ],
-  "author": "Hector Fernando Hurtado Montoya",
+  "_resolved": "https://registry.npmjs.org/bigcommerce-sitewide-banners/-/bigcommerce-sitewide-banners-0.2.1.tgz",
+  "_shasum": "d4e842151290abe0dafcb9aaa00023ffd530ffbf",
+  "_spec": "bigcommerce-sitewide-banners",
+  "_where": "/Users/odp/Desktop/cornerstone",
+  "author": {
+    "name": "Hector Fernando Hurtado Montoya"
+  },
+  "bugs": {
+    "url": "https://github.com/brandlabs/bigcommerce-sitewide-banners/issues"
+  },
+  "bundleDependencies": false,
   "contributors": [
     {
       "name": "Carson Reinke"
     }
   ],
-  "license": "MIT",
   "dependencies": {
     "whatwg-fetch": "^2.0.3"
   },
+  "deprecated": false,
+  "description": "Sets everything you need in order to have a proper Sitewide banner on your store",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -46,5 +60,23 @@
     "set-value": ">=2.0.1",
     "uglifyjs-webpack-plugin": "^1.1.8",
     "webpack": "^3.11.0"
-  }
+  },
+  "homepage": "https://github.com/brandlabs/bigcommerce-sitewide-banners#readme",
+  "keywords": [
+    "bigcommerce",
+    "sitewide banners",
+    "banners"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "bigcommerce-sitewide-banners",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/brandlabs/bigcommerce-sitewide-banners.git"
+  },
+  "scripts": {
+    "build": "grunt webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.2.1"
 }
